@@ -1,5 +1,6 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
+#include "decimals.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -8,12 +9,28 @@ TEST_CASE("Verify Test Configuration", "verification") {
 /*test case echo_variable */
 
 /*test case add_to_double_1 with 0 as parameter*/
+TEST_CASE("Verify add_to_double_1", "verification of adding 0.9") 
+{
+	REQUIRE(add_to_double_1 (0) == 0.9);
+}
 
 /*test case add_to_double_1 with 1 as parameter*/
+TEST_CASE("Verify add_to_double_1 with number 1", "verification of adding 0.9 + 1") 
+{
+REQUIRE(add_to_double_1 (1) == 1.9);
+}
 
 /*test case add_to_double_2 with 0 as parameter*/
+TEST_CASE("Verify add_to_double_2", "verification of adding 1.5") 
+{
+	REQUIRE(add_to_double_2 (0) == 1.5);
+}
 
 /*test case add_to_double_2 with 1 as parameter*/
+TEST_CASE("Verify add_to_double_2 with number 1", "verification of adding 0.9 + 2") 
+{
+REQUIRE(add_to_double_2 (1) == 2.5);
+}
 
 /*test case char test ASCII values */
 
